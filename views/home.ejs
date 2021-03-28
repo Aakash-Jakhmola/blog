@@ -1,0 +1,12 @@
+<%- include("partials/header") -%>
+	<% for(let i=0 ; i < blogs.length ; ++i) { %>
+		<h1 class="display-6">
+			<%= blogs[i].blogHeading %>
+		</h1>
+
+		<p class="lead medium">
+			<%= blogs[i].blogBody.substring(0, 100) + " ..." %>
+				<a href="/blogs/<%=blogs[i].blogHeading%>">Read More</a>
+		</p>
+		<% } %>
+			<%- include("partials/footer") -%>
